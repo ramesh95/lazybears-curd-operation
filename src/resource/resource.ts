@@ -1,6 +1,4 @@
-import { isNullOrUndefined } from 'util';
 import { EnqueryModel } from '../model/model'
-import { EmailUtility } from '../utility/emailUtility'
 
 export class Resource {
     public async findData(
@@ -16,13 +14,6 @@ export class Resource {
             let school = new EnqueryModel()
             await school.defineSchema()
             await school.insertData(name, emailId, mobileNo, message)
-            let emailUtility = new EmailUtility()
-                await emailUtility.sendEmail(
-                    "rameshbishwas95@gmail.com"
-                    , emailId
-                    , "enquery"
-                    , message
-                )
         } catch (error) {
             throw error;
         }

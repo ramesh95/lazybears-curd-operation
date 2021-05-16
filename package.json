@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "./node_modules/.bin/mocha  ./dist/**/*.spec.js",
     "start": "node ./dist/app",
     "gulp": "gulp"
   },
